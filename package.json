@@ -1,6 +1,6 @@
 {
     "name": "@tusent.io/lzmasz",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "author": {
         "name": "Tusentio",
         "email": "contact@tusent.io"
@@ -10,6 +10,7 @@
         "lzmasz": "./bin/lzmasz.js"
     },
     "dependencies": {
+        "chalk": "^5.3.0",
         "gitignore-fs": "^2.2.2",
         "lzma-native": "^8.0.6",
         "pretty-bytes": "^6.1.1"

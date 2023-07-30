@@ -14,6 +14,7 @@ const compressor = lzma.createCompressor({
 });
 
 import prettyBytes from "pretty-bytes";
+import chalk from "chalk";
 
 async function* walk(dir) {
     for await (const dirent of await fs.opendir(dir)) {
@@ -41,6 +42,7 @@ input.pipe(compressor).pipe(output);
         const buffer = await fs.readFile(file);
 
         if (isValidUTF8(buffer)) {
+            console.debug(chalk.gray(`+ ${file}`));
             const padded = Buffer.concat([buffer, Buffer.alloc(1)], buffer.length + 1);
             await new Promise((resolve) => input.write(padded, resolve));
         }
@@ -54,4 +56,4 @@ for await (const chunk of output) {
     size += chunk.length;
 }
 
-console.log(`${prettyBytes(size)} (${size.toLocaleString()} bytes)`);
+console.log(chalk.bold(`${prettyBytes(size)} (${size.toLocaleString()} bytes)`));
