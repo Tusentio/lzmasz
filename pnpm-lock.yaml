@@ -14,12 +14,18 @@ importers:
       gitignore-fs:
         specifier: ^2.2.2
         version: 2.2.2
+      ignore:
+        specifier: ^5.3.1
+        version: 5.3.1
       lzma-native:
         specifier: ^8.0.6
         version: 8.0.6
       pretty-bytes:
         specifier: ^6.1.1
         version: 6.1.1
+      pure-rand:
+        specifier: ^6.1.0
+        version: 6.1.0
     devDependencies:
       '@types/node':
         specifier: ^22.1.0
@@ -71,6 +77,9 @@ packages:
   promisify-child-process@4.1.2:
     resolution: {integrity: sha512-APnkIgmaHNJpkAn7k+CrJSi9WMuff5ctYFbD0CO2XIPkM8yO7d/ShouU2clywbpHV/DUsyc4bpJCsNgddNtx4g==}
     engines: {node: '>=8'}
+
+  pure-rand@6.1.0:
+    resolution: {integrity: sha512-bVWawvoZoBYpp6yIoQtQXHZjmz35RSVHnUOTefl8Vcjr8snTPY1wnpSPMWekcFwbxI6gtmT7rSYPFvz71ldiOA==}
 
   readable-stream@3.6.2:
     resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
@@ -129,6 +138,8 @@ snapshots:
   pretty-bytes@6.1.1: {}
 
   promisify-child-process@4.1.2: {}
+
+  pure-rand@6.1.0: {}
 
   readable-stream@3.6.2:
     dependencies:
